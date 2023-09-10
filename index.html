@@ -7,9 +7,18 @@
 </head>
 <body>
     <h1>My Discord Presence</h1>
+    
+    <!-- Display Discord avatar -->
+    <img src="" alt="Discord Avatar" id="avatar" width="100" height="100">
+    
+    <!-- Display Discord banner -->
+    <img src="" alt="Discord Banner" id="banner" width="300">
+
     <p>Status: <span id="status"></span></p>
     <p>Activity: <span id="activity"></span></p>
     <p>Listening to Spotify: <span id="spotify"></span></p>
+    <p>Spotify Track: <span id="spotifyTrack"></span></p>
+    <p>Spotify Timestamps: <span id="spotifyTimestamps"></span></p>
 
     <script>
         // Your Discord user ID (replace :your_id with your actual ID)
@@ -27,9 +36,17 @@
                 
                 if (data.data.listening_to_spotify) {
                     document.getElementById("spotify").textContent = "Yes";
+                    document.getElementById("spotifyTrack").textContent = data.data.spotify.song;
+                    document.getElementById("spotifyTimestamps").textContent = `Start: ${new Date(data.data.spotify.timestamps.start)} | End: ${new Date(data.data.spotify.timestamps.end)}`;
                 } else {
                     document.getElementById("spotify").textContent = "No";
+                    document.getElementById("spotifyTrack").textContent = "";
+                    document.getElementById("spotifyTimestamps").textContent = "";
                 }
+
+                // Update Discord avatar and banner images
+                document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${data.data.discord_user.avatar}.png`;
+                document.getElementById("banner").src = data.data.discord_user.banner ? `https://cdn.discordapp.com/banners/${data.data.discord_user.id}/${data.data.discord_user.banner}.png` : "";
             } catch (error) {
                 console.error("Error fetching Discord presence:", error);
             }

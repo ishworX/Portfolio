@@ -1,15 +1,43 @@
-html <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-  </head>
-  <body>
-    BODY
-    <script src="" async defer></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Presence</title>
+</head>
+<body>
+    <h1>My Discord Presence</h1>
+    <p>Status: <span id="status"></span></p>
+    <p>Activity: <span id="activity"></span></p>
+    <p>Listening to Spotify: <span id="spotify"></span></p>
+
+    <script>
+        // Your Discord user ID (replace :your_id with your actual ID)
+        const userId = "1055655980521767023";
+
+        // Function to fetch and update Discord presence
+        async function updatePresence() {
+            try {
+                const response = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
+                const data = await response.json();
+
+                // Update status, activity, and Spotify info
+                document.getElementById("status").textContent = data.data.discord_status;
+                document.getElementById("activity").textContent = data.data.activities[0].name;
+                
+                if (data.data.listening_to_spotify) {
+                    document.getElementById("spotify").textContent = "Yes";
+                } else {
+                    document.getElementById("spotify").textContent = "No";
+                }
+            } catch (error) {
+                console.error("Error fetching Discord presence:", error);
+            }
+        }
+
+        // Update presence on page load and then every 30 seconds (adjust as needed)
+        updatePresence();
+        setInterval(updatePresence, 30000);
+    </script>
+</body>
 </html>

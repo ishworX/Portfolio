@@ -1,55 +1,13 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Discord Status</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <!-- everything important in here -->
-        <script src="init.js"></script>
-    </head>
-    <!-- adds the main divs and details to be modified in the future -->
-    <body onload="onload()">
-        <a href="https://whoisrabbit.com"><button>Return to website</button></a>
-        <section class="center">
-            <div class="discord">
-                <div id="profile">
-                    <div id="userinfo">
-                        <img id="avatar"
-                            draggable="false"
-                            alt=""
-                            width="64"
-                            height="64">
-                        <p id="name"></p>
-                        <img id="statusemoji"
-                            draggable="false"
-                            alt=""
-                            width="24"
-                            height="24"><p id="status"></p>
-                        <a id="button" href="https://discord.com/users/1055655980521767023/"><button class="bstyle">View user</button></a>
-                    </div>
-                    <br><br>
-                </div>
-                <div id="activities">
-                </div>
-            </div>
-        </section>
-
-        <script>
-            // loop to constantly update the details of the activities even if no change was made (for example, time elapsed)
-            var i = 1;
-
-            function loop() {
-                setTimeout(function() {
-                    updatepresence();
-                    
-                    i++;
-                    if (i < 10) {
-                        loop();
-                    }
-                }, 4000)
-            }
-
-            loop();
-        </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbit</title>
+</head>
+<body>
+    Hehe!
+    <br>
+    Work In Progress!
+</body>
 </html>

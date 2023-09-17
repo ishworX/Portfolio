@@ -68,31 +68,72 @@
                     <!-- Below Profile Pic Parts! -->
                     <div class="detailobjects">
                         <hr/>
-                        <a href="https://discord.gg/rabbit" target="_blank" class="btn mr-10">
-                            Join Discord 
-                        </a>
-                        <a href="www.whoisrabit.com" target="_blank" class="btn btn-small">
-                            <img src="/userCard/assets/img/bot.png" alt=""> 
-                        </a>
-                    </div>
-
-                    <!-- About Me Section -->
-                    <div class="basic-infos">
-                        <div class="category-title"> About Me</div>
-                        <p id="discorduser.aboutme"></p>
-                    </div>
-                    <div id="spotify-playback" class="roles"></div>
-
-                    <!-- Roles Section -->
-                </div>
-            </div>
-            
-            
-        </div>
-
-    </div>
-
-
+                        <div class="btn-container">
+                            <a href="https://discord.gg/whoisrabbit" target="_blank" class="btn mr-10">
+                                Join Discord 
+                            </a>
+                            <a href="www.whoisrabit.com" target="_blank" class="btn btn-small">
+                                <img src="/userCard/assets/img/bot.png" alt=""> 
+                            </a>
+                        </div>
     
+                        <!-- About Me Section -->
+                        <div class="basic-infos">
+                            <div class="category-title"> About Me</div>
+                            <p id="discorduser.aboutme"></p>
+                        </div>
+                        <div id="spotify-playback" class="roles"></div>
+    
+                        <!-- Roles Section -->
+                        <div class="roles">
+                            <div class="category-title"> Activity </div>
+                            <div id="activitycard">
+                                <div id="activities" width="100%"></div>
+                            </div>
+    
+                            <div class="basic-infos">
+                                <div class="category-title">Member Since</div>
+                                <p>
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                    May 2002
+                                    <i style="color:#00000000" class="fa-brands fa-discord"></i>
+                                    <i class="fa-brands fa-discord"></i> 
+                                    Jul 31, 2016
+                                    <i style="color:#00000000" class="fa-brands fa-discord"></i>
+                                    <i class="fa-solid fa-code"></i> Sep 03, 2020</p>
+                            </div>
+                            <div class="roles">
+                                <div class="category-title">Roles</div>
+                                <div id="role-list" class="roles-list">
+                                </div>
+                            </div>
+    
+                            <!-- Bottom Part -->
+                            <div class="note">
+                                <div class="category-title"> Note </div>
+                                <textarea placeholder="Click here to add a note."></textarea>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
 </body>
+
+<!-- Important JS scripts! -->
+<script src="/userCard/assets/javascripts/profile.js"></script>
+<script src="/userCard/assets/javascripts/update.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const mainContent = document.getElementById("main-content");
+
+        // Simulate API fetching and loading time.
+        setTimeout(function () {
+            loadingScreen.style.display = "none";
+            mainContent.style.display = "block";
+        }, 2000);
+        });
+</script>
 </html>

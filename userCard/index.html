@@ -8,18 +8,77 @@
 
     <title>My Discord Profile</title>
 
-    <!-- Important Links! -->
+    <!-- ! Important Links! -->
     <link rel="stylesheet" href="./assets/css/activity.css">
 	<link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://kit.fontawesome.com/19746ffdef.js" crossorigin="anonymous"> </script>
     <script src="./assets/javascripts/lanyard.js"></script>
 	<script src="./assets/javascripts/activity.js"></script>
 
-    <!--J query! -->
+    <!-- J query! -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 </head>
 <body>
     
+    <!-- Maybe some loading screen contents! -->
+    <div class="loader" id="laoding-screen">
+        <div class="square_1 square"></div>
+        <div class="square-2 square"></div>
+    </div>
+
+    <!-- Discord User Card  -->
+    <div class="cardcontainer" id="main-content"> 
+        <!-- Nitro Card Inside -->
+        <div class="card nitrocard"> 
+            <!-- Head of the card! -->
+            <div class="card-header" id="discorduser.banner">
+                <div 
+                    style="background: url("./assets/img/banner.gif");"
+                    class="banner-img"
+                ></div>
+            </div>
+            <!-- Body of the card! -->
+            <div class="card-body">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div id="discorduser.avatarlink"></div>
+                    <div class="status-container">
+                        <div id="discorduser.desktop"></div>
+                        <div id="discorduser.mobile"></div>
+                        <div id="discorduser.web"></div>
+                        <div id="discorduser.spotify"></div>
+                    </div>
+                    <div class="badges-container" id="badge-container"></div>
+                </div>
+                <!-- Profile Body -->
+                <div class="profile-body">
+                    <!-- Somewhere Between Banner and Body! -->
+                    <div class="username" id="discorduser.username">
+                        Loading... 
+                        <div class="badge"> 
+                            <i class="fa-solid fa-check"></i> System </div>
+                    </div>
+                    <div class="handle" id="discorduser.handle"></div>
+                    <div class="card-status">
+                        <span id="discorduser.emoji"></span>
+                        <span id="discorduser.staus"></span>
+                        <hr>
+                    </div>
+
+                    <!-- Below Profile Pic Parts! -->
+                    <div class="detailobjects">
+                        <hr/>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+
     
 </body>
 </html>

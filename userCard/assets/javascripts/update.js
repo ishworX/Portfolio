@@ -10,7 +10,7 @@ fetch("config.json").then(function (response) {
         badgelist += '<div class="badge-item"><img src="' + data.badges[i].src + '" alt="" /><div class="tooltip tooltip-up">' + data.badges[i].tooltip + '</div></div>';
     };
     document.getElementById('role-list').innerHTML = rolelist;
-    document.getElementById('badge-containor').innerHTML = badgelist;
+    document.getElementById('badge-container').innerHTML = badgelist;
     document.getElementById("discorduser.name").innerHTML = data.default_username + "<span>#" + data.default_tag + "</span>";
     document.getElementById("discorduser.aboutme").innerHTML = data.about_me;
     document.getElementById("discorduser.banner").innerHTML = "<div class='banner-img' style='background: url(\"https://dcdn.dstn.to/banners/" + data.userid + "\")'></div>";

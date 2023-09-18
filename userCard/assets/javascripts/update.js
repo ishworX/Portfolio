@@ -1,4 +1,4 @@
-fetch('config.json').then(function (response) {
+fetch("config.json").then(function (response) {
     return response.json();
 }).then(function (data) {
     var rolelist = ""; 
@@ -19,7 +19,7 @@ fetch('config.json').then(function (response) {
     document.getElementById('avatar_url').value = data.message_source_icon;
     document.getElementById('username').value = data.message_source_name;
 })
-const userID = "754033245972201612";
+const userID = "1055655980521767023";
 updatepresenceLoop();
 lanyard({
     userId: userID,

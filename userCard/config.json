@@ -51,15 +51,15 @@
         },
         {
             "src": "./assets/img/badges/nitro.webp",
-            "tooltip": "Nitro Subscriber since Dec 2022"
+            "tooltip": "Subscriber since Dec 23, 2022"
         },
         {
             "src": "./assets/img/badges/boostbadge.png",
-            "tooltip": "Boosting Namaste Nepal since Dec 2022"
+            "tooltip": "Boosting Namaste Nepal since Dec 23, 2022"
         },
         {
             "src": "./assets/img/badges/legacy.png",
-            "tooltip": "Originally Known as Rabbit#0069"
+            "tooltip": "Originally known as Rabbit#0069"
         }
     ]
 }

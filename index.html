@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="About me">
+    <meta name="author" content="">
+
     <title>Rabbit</title>
+
+    <!-- ! J query-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+    <!-- ! Important Links and Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/19746ffdef.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/assests/style.css">
 </head>
+
 <body>
-    Hehe!
-    <br>
-    Work In Progress!
+    <!-- Todo: Homepage -->
+    <div class="homepage">
+        <div class="navbar">
+            <a class="navlogo">Rabbit</a>
+            <button class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+            <div class="navlinkwrap">
+                <span class="navlink links" onclick="location.href='https://whoisrabbit.com';"
+                    style="cursor: pointer;">Home</span>
+                <span class="navlink links" onclick="location.href='https://whoisrabbit.com/portfolio';"
+                    style="cursor: pointer;">Portfolio</span>
+                <span class="navlink links" onclick="location.href='https://whoisrabbit.com/portfolio';"
+                    style="cursor: pointer;">Projects</span>
+                <span class="navlink links" onclick="location.href='https://whoisrabbit.com/portfolio';"
+                    style="cursor: pointer;">IDk yet</span>
+            </div>
+
+            <div class="buttonwrap">
+                <button class="createbtn selectedbtn" onclick="location.href='https://whoisrabbit.com/';"
+                    style="cursor: pointer;">whoisRabbit</button>
+                <button class="createbtn" onclick="location.href='https://discord.gg/whoisrabbit';"
+                    style="cursor: pointer;">Discord</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="infobox">
+                <iframe src="./assets/terminal.html"
+                    style="width:100%; border:0px;height:30vh; overflow: hidden;"></iframe>
+
+                <p class="infobox-slimtext" style="font-size:x-large; line-height: 1;">
+                    Hello, I am Rabbit, a <br><span class="whoami" style="color:#ee6464"></span> <br>
+                </p>
+                <br>
+                <div class="infobox-btnwrapper">
+                    <button class="infobox-explorebtn selected"
+                        onclick="location.href='https://whoisrabbit.com/portfolio';">Portfolio</button>
+                    <button class="infobox-createbtn"
+                        onclick="location.href='https://rajatcj.com/projects';">Projects</button>
+                </div>
+            </div>
+            <iframe src="./userCard/index.html"
+                style="width:100%; max-width: calc(80vh / 1.5); height: 80vh; border: 0px; border-radius: 5px;"
+                title="Discord Status"></iframe>
+
+        </div>
 </body>
+
 </html>

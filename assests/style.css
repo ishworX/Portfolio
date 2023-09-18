@@ -142,7 +142,10 @@ button:hover::after {
     -webkit-text-fill-color: transparent;
     border-bottom: #9b51e0;
 }
-    
+
+.navbar.navlink:not(:last-child) {
+    margin-right: 32px;
+}
 
 /* Main Home Page */
 .homepage {

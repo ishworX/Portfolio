@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang='en'>
+   <head>
+      <meta charset='UTF-8'>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="theme-color" content="#F9A762" data-react-helmet="true" />
+      <meta name="author" content="Rajat Jha">
+      <meta name="description" content="A portal to all my links, handles (whoisrabbit) and projects.">
+      <meta name="keywords" content="Rabbit, Rabbitey, Rabbit from discord, whoisrabbit">
+      <link rel="icon" id="iconofthepage" type="image/x-icon" href="https://api.lanyard.rest/1055655980521767023.jpg">
+      <title id="titleofthepage"> Rabbit's Linktree</title>
+      <script src="../profile/assets/javascripts/lanyard.js" crossorigin="anonymous"></script>
+
+      <!-- Media Meta Tags -->
+      <meta property="og:locale" content="en_US">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="mail@whoisrabbit.com">
+      <meta property="og:title" content="Rabbit • Linktree">
+      <meta property="og:description" content="A portal to all my links, sites, social handles and my live online presence">
+      <meta property="og:image" content="https://api.lanyard.rest/1055655980521767023.jpg">
+      <meta property="og:url" content="https://whoisrabbit.com/linktree"/>
+
+      <!-- Twitter Meta Tags -->
+      <meta name="twitter:title" content="Rajat • Linktree">
+      <meta name="twitter:description" content="A portal to all my links, handles and projects.">
+      <meta name="twitter:image" content="https://api.lanyard.rest/1055655980521767023.jpg">
+
+      <!-- everything important in here -->
+      <link rel="stylesheet" href="./flashavatar.css">
+      <link rel="stylesheet" href="../particle/style.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Josefin+Sans&display=swap">
+      <link rel='stylesheet' href='./assets/css/style.css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+      <!--J query-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+      <!--nepali date-->
+      <script src="https://cdn.jsdelivr.net/npm/nepali-date-converter/dist/nepali-date-converter.umd.js"></script>
+
+      <!--preloads-->
+      <link rel="preload" href="./assets/css/bg.png" as="image">
+      <link rel="preload" href="./assets/css/bg2.png" as="image">
+      <link rel="preload" href="./assets/rickroll.gif" as="image">
+      <link rel="preload" href="./assets/rick.mp3" as="audio">
+   </head>
+   <body>
+      <a class='mediabtn' style="position:absolute; top:10px; right:10px; background: var(--primary-bgopp); color: var(--primary-bg);" id='themebutton' onclick="changeTheme()" href='#'><i class="fa-solid fa-sun"></i></a>
+
+      <audio id="idAudio">
+         <source src="./assets/rick.mp3" type="audio/ogg">
+      </audio>
+
+      <div class='triangle' id="particles-js"></div>
+
+      <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+
+      <div class='container'>
+         <div class='space'></div>
+         <div class='header--box'>
+            <header class='header'>
+               <div class='header__icon-box' id="avatar">
+                  <img src='https://api.lanyard.rest/1055655980521767023.jpg' onclick="openDisc()" style="cursor: pointer;" alt='Discord Avatar' class='header__icon' />
+               </div>
+            </header>
+         </div>
+         <div class='links-container'>
+            <li class='right'><a class='link' href='https://whoisrabbit.com/'>Home Page</a>
+            </li>
+            <li class='left'><a class='link' href='https://whoisrabbit.com/portfolio'>Portfolio</a>
+            </li>
+            <li class='right'><a class='link' href='/projects/index.html'>Bots</a>
+            </li>
+            <li class='left'><a class='link' href='https://discord.gg/Rabbit'>Support Server</a>
+            </li>
+            <li class='left'><a class='link' href='https://github.com/ishworX'>GitHub</a>
+            </li>
+         </div>
+         <div class='user-info-box'>
+            <div class='user-info'>
+               <h2>@whoisrabbit</h2>
+            </div>
+            <br>
+
+            <div class="mediabuttons">
+               <a class='mediabtn' href='https://discord.gg/nepal'><i class="fa-brands fa-discord"></i></a>
+               <a class='mediabtn' href='https://www.reddit.com/user/rabbitfromdiscord'><i class="fa-brands fa-instagram"></i></a>
+               <a class='mediabtn' href='https://twitter.com/add/rabbiteyy'><i class="fa-brands fa-snapchat"></i></a>
+               <a class='mediabtn' href='https://open.spotify.com/user/315ghvrqzp4lgdngwdpc6bmuhdle?si=abf68e9b3f1f443f'><i class="fa-brands fa-spotify"></i></a>
+            </div>
+            <div class="spotify-np" id="spotify-np">
+               <p id="spotify-iframe" src="hm"></p>
+            </div>
+            <div id="timedate">
+               <div id="my-time" title=""></div>
+               <div id="my-date"></div>
+               <div id="my-time-label">Loading Time...</div>
+            </div>
+         </div>
+      </div>
+      <div class="discordprofile" id="discordprofile">
+         <iframe id="discordprofileinside" src="../userCard/index.html" style="margin:15vh auto; display:block; width:98%; max-width: 450px; height: 80vh; border:0px; border-radius: 5px;" title="Discord Status"></iframe>
+      </div>
+   </body>
+   <footer>
+      <div class="copyrighttext">
+         <i class="fa-regular fa-copyright"></i> Copyright 2023. All rights reserved.
+      </div>
+   </footer>
+</html>
+
+<!-- Files -->
+<script src="./assets/javascript/titleanime.js"></script>
+<script src="./assets/javascript/chatid.js"></script>
+<script src="./assets/javascript/msgsend.js"></script>
+<script src="./assets/javascript/spotify.js"></script>
+<script src="./assets/javascript/linktree.js"></script>
+
+<!-- Add a script to handle the loading screen-->
+<script>
+   // Add an event listener to the window's "load" event
+   window.addEventListener("load", function() {
+     // Hide the loading screen element
+     //document.querySelector(".loading-screen").style.display = "none";
+   });
+</script>
+
+<!-- Particle.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="./assets/javascript/particle.js"></script>
+
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/19746ffdef.js" crossorigin="anonymous"></script>
+
+<!--No dev tools-->
+<script disable-devtool-auto src="./assets/javascript/disabledevtools.js"></script>

@@ -19,7 +19,7 @@ fetch("config.json").then(function (response) {
     document.getElementById('avatar_url').value = data.message_source_icon;
     document.getElementById('username').value = data.message_source_name;
 })
-const userID = "1055655980521767023";
+const userID = "209275429205311489";
 updatepresenceLoop();
 lanyard({
     userId: userID,
